@@ -11,7 +11,6 @@
 	<ItemGroup>
 		<Folder Include="Controls\" />
 		<Folder Include="Resources\Images\" />
-		<Folder Include="Resources\Styles\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -19,9 +18,14 @@
 		<None Include="Resources\**\*.xaml" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Update="Resources\Styles\TextBlock.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </None>
+	</ItemGroup>
+
 	<Target Name="CombineXamlResources" BeforeTargets="BeforeBuild">
 		<Message Text="XAMLCombiner: Generating resource dictionary." Importance="High" />
-		<Exec WorkingDirectory="$(MSBuildProjectDirectory)"
-			  Command="powershell.exe -NoProfile -ExecutionPolicy Bypass -File &quot;$(SolutionDir)\BuildScripts\XAMLCombiner.ps1&quot;" />
+		<Exec WorkingDirectory="$(MSBuildProjectDirectory)" Command="powershell.exe -NoProfile -ExecutionPolicy Bypass -File &quot;$(SolutionDir)\BuildScripts\XAMLCombiner.ps1&quot;" />
 	</Target>
 </Project>

@@ -8,5 +8,9 @@
 -->
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-
+	<!-- Text Generic Fill Brushes -->
+	<SolidColorBrush x:Key="TextForegroundPrimaryBrush"   Color="{StaticResource TextFillPrimaryColor}" />
+	<SolidColorBrush x:Key="TextForegroundSecondaryBrush" Color="{StaticResource TextFillSecondaryColor}" />
+	<SolidColorBrush x:Key="TextForegroundTertiaryBrush"  Color="{StaticResource TextFillTertiaryColor}" />
+	<SolidColorBrush x:Key="TextForegroundDisabledBrush"  Color="{StaticResource TextFillDisabledColor}" />
 </ResourceDictionary>
