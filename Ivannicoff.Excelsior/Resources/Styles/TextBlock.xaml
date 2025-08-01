@@ -10,43 +10,46 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 	<!-- TextBlockes Styles and Typography. WinUI Title Large (40/52) & Display (68/92) not provided! -->
 	<!-- Content TextBlock Styles (14/20) -->
-	<Style x:Key="ContentTextBlockStyle" TargetType="TextBlock">
-		<Setter Property="Foreground" Value="{DynamicResource TextForegroundPrimaryBrush}" />
+	<Style x:Key="TextBlockDefaultStyle" TargetType="TextBlock">
 		<Setter Property="FontSize" Value="14" />
 		<Setter Property="FontWeight" Value="Regular" />
 		<Setter Property="LineHeight" Value="20" />
 		<Setter Property="LineStackingStrategy" Value="MaxHeight" />
 		<Setter Property="TextTrimming" Value="CharacterEllipsis" />
-		<Setter Property="TextWrapping" Value="Wrap" />		
+		<Setter Property="TextWrapping" Value="Wrap" />
 	</Style>
-	<Style x:Key="ContentStrongTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource ContentTextBlockStyle}">
+	<Style x:Key="TextBlockContentStyle" TargetType="TextBlock" BasedOn="{StaticResource TextBlockDefaultStyle}">
+		<Setter Property="Foreground" Value="{DynamicResource TextForegroundPrimaryBrush}" />
+		<Setter Property="Margin" Value="{StaticResource ControlDefaultMarginThickness}" />
+	</Style>
+	<Style x:Key="TextBlockContentStrongStyle" TargetType="TextBlock" BasedOn="{StaticResource TextBlockContentStyle}">
 		<Setter Property="FontWeight" Value="SemiBold" />
 	</Style>
 	<!-- Caption TextBlock Style (12/16) -->
-	<Style x:Key="CaptionTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource ContentTextBlockStyle}">
+	<Style x:Key="TextBlockCaptionStyle" TargetType="TextBlock" BasedOn="{StaticResource TextBlockContentStyle}">
 		<Setter Property="FontSize" Value="12" />
 		<Setter Property="LineHeight" Value="16" />
 	</Style>
 	<!-- Content Large TextBlcok Style (18/24) -->
-	<Style x:Key="ContentLargeTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource ContentTextBlockStyle}">
+	<Style x:Key="TextBlockContentLargeStyle" TargetType="TextBlock" BasedOn="{StaticResource TextBlockContentStyle}">
 		<Setter Property="FontSize" Value="18" />
 		<Setter Property="LineHeight" Value="24" />
 	</Style>
-	<Style x:Key="ContentLargeStrongTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource ContentStrongTextBlockStyle}">
+	<Style x:Key="TextBlockContentLargeStrongStyle" TargetType="TextBlock" BasedOn="{StaticResource TextBlockContentStrongStyle}">
 		<Setter Property="FontSize" Value="18" />
 		<Setter Property="LineHeight" Value="24" />
 	</Style>
 	<!-- Subtitle TextBlock Style (20/28) -->
-	<Style x:Key="SubtitleTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource ContentStrongTextBlockStyle}">
+	<Style x:Key="TextBlockSubtitleStyle" TargetType="TextBlock" BasedOn="{StaticResource TextBlockContentStrongStyle}">
 		<Setter Property="Foreground" Value="{DynamicResource TextForegroundSecondaryBrush}" />
 		<Setter Property="FontSize" Value="20" />
 		<Setter Property="LineHeight" Value="28" />
 	</Style>
 	<!-- Title TextBlock Style (28/36) -->
-	<Style x:Key="TitleTextBlockStyle" TargetType="TextBlock" BasedOn="{StaticResource ContentStrongTextBlockStyle}">
+	<Style x:Key="TextBlockTitleStyle" TargetType="TextBlock" BasedOn="{StaticResource TextBlockContentStrongStyle}">
 		<Setter Property="FontSize" Value="28" />
 		<Setter Property="LineHeight" Value="36" />
 	</Style>
 	<!-- Default TextBlock Style -->
-	<Style TargetType="TextBlock" BasedOn="{StaticResource ContentTextBlockStyle}" />
+	<Style TargetType="TextBlock" BasedOn="{StaticResource TextBlockDefaultStyle}" />
 </ResourceDictionary>

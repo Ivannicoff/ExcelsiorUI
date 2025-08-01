@@ -14,10 +14,22 @@
 		xmlns:local="clr-namespace:ExcelsiorUIDemo"
 		mc:Ignorable="d"
 		Title="MainWindow" Height="450" Width="800">
-	<Grid>
-		<StackPanel Orientation="Vertical">
-			<TextBlock Style="{StaticResource TitleTextBlockStyle}">Excelsior UI Demo</TextBlock>
-			<TextBlock Style="{StaticResource SubtitleTextBlockStyle}">Inspired by WinUI, optimized &amp; adopted for LOB</TextBlock>
+	<Grid Background="#FFF3F3F3">
+		<StackPanel Orientation="Vertical" Margin="20">
+			<TextBlock Style="{StaticResource TextBlockTitleStyle}">Excelsior UI Demo</TextBlock>
+			<TextBlock Style="{StaticResource TextBlockSubtitleStyle}">Inspired by WinUI, optimized &amp; adopted for LOB</TextBlock>
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition />
+					<ColumnDefinition />
+					<ColumnDefinition />
+					<ColumnDefinition />
+				</Grid.ColumnDefinitions>
+				<Button Grid.Column="0" Content="Default" IsDefault="True" />
+				<Button Grid.Column="1" Content="Normal" />
+				<Button Grid.Column="2" Content="Escape" IsCancel="True" />
+				<Button Grid.Column="3" Content="Disabled" IsEnabled="False" />
+			</Grid>
 		</StackPanel>
 	</Grid>
 </Window>

@@ -29,5 +29,10 @@
 			▸ ControlPressedCornerRadius
 			▸ DialogHeaderTextFontFamily
 	-->
-
+	<!-- Control Default Metrics -->
+	<CornerRadius x:Key="ControlBorderCornerRadius">4</CornerRadius>
+	<Thickness x:Key="ControlDefaultBorderThickness">1</Thickness>
+	<Thickness x:Key="ControlDefaultMarginThickness">4</Thickness>
+	<Thickness x:Key="ControlInnerMarginThickness">1</Thickness>
+	<Thickness x:Key="ControlDefaultPaddingThickness">8,4,8,4</Thickness>
 </ResourceDictionary>

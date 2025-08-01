@@ -13,4 +13,26 @@
 	<SolidColorBrush x:Key="TextForegroundSecondaryBrush" Color="{StaticResource TextFillSecondaryColor}" />
 	<SolidColorBrush x:Key="TextForegroundTertiaryBrush"  Color="{StaticResource TextFillTertiaryColor}" />
 	<SolidColorBrush x:Key="TextForegroundDisabledBrush"  Color="{StaticResource TextFillDisabledColor}" />
+
+	<!-- Control with Content Brushes -->
+	<SolidColorBrush x:Key="ControlDefaultBackgroundBrush" Color="{StaticResource ControlFillDefaultColor}" />
+	<SolidColorBrush x:Key="ControlHoveredBackgroundBrush" Color="{StaticResource ControlFillSecondaryColor}" />
+	<SolidColorBrush x:Key="ControlPressedBackgroundBrush" Color="{StaticResource ControlFillTertiaryColor}" />
+	<SolidColorBrush x:Key="ControlDisabledBackgroundBrush" Color="{StaticResource ControlFillDisabledColor}" />
+
+	<SolidColorBrush x:Key="ControlDefaultForegroundBrush" Color="{StaticResource TextFillPrimaryColor}" />
+	<SolidColorBrush x:Key="ControlPressedForegroundBrush" Color="{StaticResource TextFillTertiaryColor}" />
+	<SolidColorBrush x:Key="ControlDisabledForegroundBrush" Color="{StaticResource TextFillDisabledColor}" />
+
+	<LinearGradientBrush x:Key="ControlDefaultBorderBrush" StartPoint="0 0" EndPoint="0 3" MappingMode="Absolute">
+		<LinearGradientBrush.GradientStops>
+			<GradientStop Offset="0.3" Color="{StaticResource ControlStrokeSecondaryColor}" />
+			<GradientStop Offset="1.0" Color="{StaticResource ControlStrokeDefaultColor}" />
+		</LinearGradientBrush.GradientStops>
+		<LinearGradientBrush.RelativeTransform>
+			<ScaleTransform CenterY="0.5" ScaleY="-1" />
+		</LinearGradientBrush.RelativeTransform>
+	</LinearGradientBrush>
+	<SolidColorBrush x:Key="ControlPressedBorderBrush" Color="{StaticResource ControlStrokeDefaultColor}" />
+	<SolidColorBrush x:Key="ControlDisabledBorderBrush" Color="{StaticResource ControlStrokeDisabledColor}" />
 </ResourceDictionary>
