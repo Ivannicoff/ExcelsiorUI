@@ -15,6 +15,9 @@
 		mc:Ignorable="d"
 		Title="MainWindow" Height="450" Width="800">
 	<Grid>
-
+		<StackPanel Orientation="Vertical">
+			<TextBlock Style="{StaticResource TitleTextBlockStyle}">Excelsior UI Demo</TextBlock>
+			<TextBlock Style="{StaticResource SubtitleTextBlockStyle}">Inspired by WinUI, optimized &amp; adopted for LOB</TextBlock>
+		</StackPanel>
 	</Grid>
 </Window>
