@@ -1,0 +1,30 @@
+﻿<!--
+    Excelsior UI Framework
+    © 2025 Alexios Ivannicoff. All rights reserved.
+    Esse quam videri — To be rather than to seem.
+
+    This source code is distributed under the terms of the MIT License,
+    full text if not included: https://opensource.org/licenses/MIT
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:System="clr-namespace:System;assembly=mscorlib">
+	<!--
+        Excelsior Resource Naming Convention (x:Key)
+
+        Format:
+            [Control][State][Content][Type]
+
+        Parts:
+            [Control] - The control type, e.g., Button, TextBox, Dialog, or Control for shared/common elements.
+            [State]   - The visual or behavioral state, e.g., Normal, Hovered, Pressed, Disabled, Error.
+                        ▸ Use "Default" when multiple states exist and a fallback is needed.
+                        ▸ Omit for state-independent resources.
+            [Content] - The visual aspect being defined, e.g., Background, Border, Text, Corner, Padding.
+            [Type]    - The kind of resource, e.g. Color, Brush, Thickness, FontFamily, Style, Template.
+
+        Example keys:
+            ▸ ButtonDefaultBackgroundBrush
+            ▸ TextBoxErrorBorderThickness
+            ▸ ControlPressedCornerRadius
+            ▸ DialogHeaderTextFontFamily
+    -->
+</ResourceDictionary>

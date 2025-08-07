@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net9.0-windows</TargetFramework>
@@ -14,9 +14,20 @@
 	<ItemGroup>
 		<Folder Include="Controls\" />
 		<Folder Include="Resources\Images\" />
-		<Folder Include="Resources\Colors\" />
 		<Folder Include="Resources\Styles\" />
-		<Folder Include="Resources\Shared\" />
 	</ItemGroup>
+
+	<!-- Build Script configuration -->
+	<ItemGroup>
+		<Page Remove="Resources\**\*.xaml" />
+		<None Include="Resources\**\*.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</None>
+	</ItemGroup>
+
+	<Target Name="CombineXamlResources" BeforeTargets="BeforeBuild">
+		<Message Text="XAMLCombiner: Generating resource dictionary." Importance="High" />
+		<Exec WorkingDirectory="$(MSBuildProjectDirectory)" Command="powershell.exe -NoProfile -ExecutionPolicy Bypass -File &quot;$(SolutionDir)\BuildScripts\Prebuild\XAMLCombiner.ps1&quot;" />
+	</Target>
 
 </Project>
