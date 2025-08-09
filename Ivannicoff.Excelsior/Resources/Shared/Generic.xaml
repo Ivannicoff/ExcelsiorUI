@@ -29,5 +29,19 @@
             ▸ ControlPressedCornerRadius
             ▸ DialogHeaderTextFontFamily
     -->
+    
+    <!-- Generic Typography and TextBlock Styles -->
+    <System:Double x:Key="DefaultFontSize">14</System:Double>
+    <System:Double x:Key="DefaultLineHeight">20</System:Double>
+    <!-- Default TextBlock Style -->
+    <Style x:Key="TextBlockDefaultStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+        <Setter Property="FontWeight" Value="Regular" />
+        <Setter Property="LineHeight" Value="{StaticResource DefaultLineHeight}" />
+        <Setter Property="LineStackingStrategy" Value="MaxHeight" />
+        <Setter Property="TextTrimming" Value="CharacterEllipsis" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+    </Style>
+    <Style TargetType="TextBlock" BasedOn="{StaticResource TextBlockDefaultStyle}" />
 
 </ResourceDictionary>

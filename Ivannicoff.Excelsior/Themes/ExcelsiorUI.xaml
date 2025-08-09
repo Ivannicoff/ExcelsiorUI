@@ -27,4 +27,58 @@
             ▸ ControlPressedCornerRadius
             ▸ DialogHeaderTextFontFamily
     -->
+	<!-- Generic Typography and TextBlock Styles -->
+	<System:Double x:Key="DefaultFontSize">14</System:Double>
+	<System:Double x:Key="DefaultLineHeight">20</System:Double>
+	<!-- Default TextBlock Style -->
+	<Style x:Key="TextBlockDefaultStyle" TargetType="TextBlock">
+		<Setter Property="FontSize" Value="{StaticResource DefaultFontSize}" />
+		<Setter Property="FontWeight" Value="Regular" />
+		<Setter Property="LineHeight" Value="{StaticResource DefaultLineHeight}" />
+		<Setter Property="LineStackingStrategy" Value="MaxHeight" />
+		<Setter Property="TextTrimming" Value="CharacterEllipsis" />
+		<Setter Property="TextWrapping" Value="Wrap" />
+	</Style>
+	<Style TargetType="TextBlock" BasedOn="{StaticResource TextBlockDefaultStyle}" />
+	<!-- TextBlock styles and typography. WinUI TitleLarge (40/52) and Display (68/92) styles are omitted -->
+	<System:Double x:Key="CaptionFontSize">12</System:Double>
+	<System:Double x:Key="CaptionLineHeight">16</System:Double>
+	<System:Double x:Key="ContentLargeFontSize">18</System:Double>
+	<System:Double x:Key="ContentLargeLineHeight">24</System:Double>
+	<System:Double x:Key="SubtitleFontSize">20</System:Double>
+	<System:Double x:Key="SubtitleLineHeight">28</System:Double>
+	<System:Double x:Key="TitleFontSize">28</System:Double>
+	<System:Double x:Key="TitleLineHeight">36</System:Double>
+	<!-- Content TextBlock Styles (14/20) -->
+	<Style x:Key="TextBlockContentStyle" TargetType="TextBlock" BasedOn="{StaticResource TextBlockDefaultStyle}">
+		<Setter Property="Foreground" Value="{DynamicResource TextDefaultForegroundBrush}" />
+		<!--<Setter Property="Margin" Value="{StaticResource TextDefaultMarginThickness}" />-->
+	</Style>
+	<Style x:Key="TextBlockContentStrongStyle" TargetType="TextBlock" BasedOn="{StaticResource TextBlockContentStyle}">
+		<Setter Property="FontWeight" Value="SemiBold" />
+	</Style>
+	<!-- Caption TextBlock Style (12/16) -->
+	<Style x:Key="TextBlockCaptionStyle" TargetType="TextBlock" BasedOn="{StaticResource TextBlockContentStyle}">
+		<Setter Property="FontSize" Value="{StaticResource CaptionFontSize}" />
+		<Setter Property="LineHeight" Value="{StaticResource CaptionLineHeight}" />
+	</Style>
+	<!-- Content Large TextBlock Style (18/24) -->
+	<Style x:Key="TextBlockContentLargeStyle" TargetType="TextBlock" BasedOn="{StaticResource TextBlockContentStyle}">
+		<Setter Property="FontSize" Value="{StaticResource ContentLargeFontSize}" />
+		<Setter Property="LineHeight" Value="{StaticResource ContentLargeLineHeight}" />
+	</Style>
+	<Style x:Key="TextBlockContentLargeStrongStyle" TargetType="TextBlock" BasedOn="{StaticResource TextBlockContentLargeStyle}">
+		<Setter Property="FontWeight" Value="SemiBold" />
+	</Style>
+	<!-- Subtitle TextBlock Style (20/28) -->
+	<Style x:Key="TextBlockSubtitleStyle" TargetType="TextBlock" BasedOn="{StaticResource TextBlockContentStrongStyle}">
+		<Setter Property="Foreground" Value="{DynamicResource TextSecondaryForegroundBrush}" />
+		<Setter Property="FontSize" Value="{StaticResource SubtitleFontSize}" />
+		<Setter Property="LineHeight" Value="{StaticResource SubtitleLineHeight}" />
+	</Style>
+	<!-- Title TextBlock Style (28/36) -->
+	<Style x:Key="TextBlockTitleStyle" TargetType="TextBlock" BasedOn="{StaticResource TextBlockContentStrongStyle}">
+		<Setter Property="FontSize" Value="{StaticResource TitleFontSize}" />
+		<Setter Property="LineHeight" Value="{StaticResource TitleLineHeight}" />
+	</Style>
 </ResourceDictionary>

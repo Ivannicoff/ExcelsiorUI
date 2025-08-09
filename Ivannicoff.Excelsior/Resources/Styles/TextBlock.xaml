@@ -1,0 +1,54 @@
+﻿<!--
+    Excelsior UI Framework
+    © 2025 Alexios Ivannicoff. All rights reserved.
+    Esse quam videri — To be rather than to seem.
+
+    This source code is distributed under the terms of the MIT License,
+    full text if not included: https://opensource.org/licenses/MIT
+-->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib">
+    <!-- TextBlock styles and typography. WinUI TitleLarge (40/52) and Display (68/92) styles are omitted -->
+    <System:Double x:Key="CaptionFontSize">12</System:Double>
+    <System:Double x:Key="CaptionLineHeight">16</System:Double>
+    <System:Double x:Key="ContentLargeFontSize">18</System:Double>
+    <System:Double x:Key="ContentLargeLineHeight">24</System:Double>
+    <System:Double x:Key="SubtitleFontSize">20</System:Double>
+    <System:Double x:Key="SubtitleLineHeight">28</System:Double>
+    <System:Double x:Key="TitleFontSize">28</System:Double>
+    <System:Double x:Key="TitleLineHeight">36</System:Double>
+
+    <!-- Content TextBlock Styles (14/20) -->
+    <Style x:Key="TextBlockContentStyle" TargetType="TextBlock" BasedOn="{StaticResource TextBlockDefaultStyle}">
+        <Setter Property="Foreground" Value="{DynamicResource TextDefaultForegroundBrush}" />
+        <!--<Setter Property="Margin" Value="{StaticResource TextDefaultMarginThickness}" />-->
+    </Style>
+    <Style x:Key="TextBlockContentStrongStyle" TargetType="TextBlock" BasedOn="{StaticResource TextBlockContentStyle}">
+        <Setter Property="FontWeight" Value="SemiBold" />
+    </Style>
+    <!-- Caption TextBlock Style (12/16) -->
+    <Style x:Key="TextBlockCaptionStyle" TargetType="TextBlock" BasedOn="{StaticResource TextBlockContentStyle}">
+        <Setter Property="FontSize" Value="{StaticResource CaptionFontSize}" />
+        <Setter Property="LineHeight" Value="{StaticResource CaptionLineHeight}" />
+    </Style>
+    <!-- Content Large TextBlock Style (18/24) -->
+    <Style x:Key="TextBlockContentLargeStyle" TargetType="TextBlock" BasedOn="{StaticResource TextBlockContentStyle}">
+        <Setter Property="FontSize" Value="{StaticResource ContentLargeFontSize}" />
+        <Setter Property="LineHeight" Value="{StaticResource ContentLargeLineHeight}" />
+    </Style>
+    <Style x:Key="TextBlockContentLargeStrongStyle" TargetType="TextBlock" BasedOn="{StaticResource TextBlockContentLargeStyle}">
+        <Setter Property="FontWeight" Value="SemiBold" />
+    </Style>
+    <!-- Subtitle TextBlock Style (20/28) -->
+    <Style x:Key="TextBlockSubtitleStyle" TargetType="TextBlock" BasedOn="{StaticResource TextBlockContentStrongStyle}">
+        <Setter Property="Foreground" Value="{DynamicResource TextSecondaryForegroundBrush}" />
+        <Setter Property="FontSize" Value="{StaticResource SubtitleFontSize}" />
+        <Setter Property="LineHeight" Value="{StaticResource SubtitleLineHeight}" />
+    </Style>
+    <!-- Title TextBlock Style (28/36) -->
+    <Style x:Key="TextBlockTitleStyle" TargetType="TextBlock" BasedOn="{StaticResource TextBlockContentStrongStyle}">
+        <Setter Property="FontSize" Value="{StaticResource TitleFontSize}" />
+        <Setter Property="LineHeight" Value="{StaticResource TitleLineHeight}" />
+    </Style>
+</ResourceDictionary>

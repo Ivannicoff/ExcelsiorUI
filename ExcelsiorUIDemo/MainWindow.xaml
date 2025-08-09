@@ -13,10 +13,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExcelsiorUIDemo"
         mc:Ignorable="d"
-        Title="MainWindow" Height="360" Width="640" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="400" Width="640" WindowStartupLocation="CenterScreen">
     <DockPanel>
-        <TextBlock DockPanel.Dock="Top" Text="Welcome to Excelsior UI Framework!" />
-        <TextBlock DockPanel.Dock="Top" Text="This is a demo application showcasing Excelsior UI components."/>
+        <StackPanel DockPanel.Dock="Top">
+            <TextBlock Text="Welcome to Excelsior UI Framework!" Style="{StaticResource TextBlockTitleStyle}" />
+            <TextBlock Text="This is a demo application showcasing Excelsior UI components." Style="{StaticResource TextBlockSubtitleStyle}"/>
+        </StackPanel>
         <Border DockPanel.Dock="Bottom" Padding="20">
             <Grid>
                 <Grid.ColumnDefinitions>

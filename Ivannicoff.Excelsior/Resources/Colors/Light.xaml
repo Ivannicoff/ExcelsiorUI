@@ -9,5 +9,33 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <!-- Excelsior Light Theme -->
-    
+    <!-- Accent Color and Shades -->
+    <Color x:Key="AccentFillBaseColor">#0078D4</Color>
+    <Color x:Key="AccentFillPrimaryColor">#0067C0</Color>
+    <Color x:Key="AccentFillSecondaryColor">#003E92</Color>
+    <Color x:Key="AccentFillTertiaryColor">#001A68</Color>
+    <Color x:Key="AccentFillInvertedColor">#F7630C</Color>
+    <Color x:Key="AccentFillDisabledColor">#37000000</Color>
+
+    <!-- Control Accented Background Brush -->
+    <SolidColorBrush x:Key="AccentControlDefaultBackgroundBrush" Color="{StaticResource AccentFillPrimaryColor}" />
+    <SolidColorBrush x:Key="AccentControlHoveredBackgroundBrush" Color="{StaticResource AccentFillPrimaryColor}" Opacity="0.9" />
+    <SolidColorBrush x:Key="AccentControlPressedBackgroundBrush" Color="{StaticResource AccentFillPrimaryColor}" Opacity="0.8" />
+
+    <!--  Text Accented Brushes -->
+    <SolidColorBrush x:Key="AccentTextDefaultBrush" Color="{StaticResource AccentFillSecondaryColor}" />
+    <SolidColorBrush x:Key="AccentTextHoveredBrush" Color="{StaticResource AccentFillTertiaryColor}" />
+    <SolidColorBrush x:Key="AccentTextPressedBrush" Color="{StaticResource AccentFillPrimaryColor}" />
+
+    <!-- Text Default Colors -->
+    <Color x:Key="TextFillPrimaryColor">#E4000000</Color>
+    <Color x:Key="TextFillSecondaryColor">#94000000</Color>
+    <Color x:Key="TextFillTertiaryColor">#72000000</Color>
+    <Color x:Key="TextFillSelectedColor">#FFFFFFFF</Color>
+    <Color x:Key="TextFillDisabledColor">#5C000000</Color>
+    <!-- Text Alternate Colors (on accented background) -->
+    <Color x:Key="TextAltFillDefaultColor">#FFFFFFFF</Color>
+    <Color x:Key="TextAltFillPressedColor">#B3FFFFFF</Color>
+    <Color x:Key="TextAltFillDisabledColor">#B3FFFFFF</Color>
+
 </ResourceDictionary>

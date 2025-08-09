@@ -8,5 +8,35 @@
 -->
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 	<!-- Excelsior Night Theme -->
-	<!-- Brushes defenitions goes here -->
+	<!-- Accent Color and Shades -->
+	<Color x:Key="AccentFillBaseColor">#FF8C00</Color>
+	<Color x:Key="AccentFillPrimaryColor">#FF9910</Color>
+	<Color x:Key="AccentFillSecondaryColor">#FFB634</Color>
+	<Color x:Key="AccentFillTertiaryColor">#FFD155</Color>
+	<Color x:Key="AccentFillInvertedColor">#0063B1</Color>
+	<Color x:Key="AccentFillDisabledColor">#28FFFFFF</Color>
+	<!-- Control Accented Background Brush -->
+	<SolidColorBrush x:Key="AccentControlDefaultBackgroundBrush" Color="{StaticResource AccentFillSecondaryColor}" />
+	<SolidColorBrush x:Key="AccentControlHoveredBackgroundBrush" Color="{StaticResource AccentFillSecondaryColor}" Opacity="0.9" />
+	<SolidColorBrush x:Key="AccentControlPressedBackgroundBrush" Color="{StaticResource AccentFillSecondaryColor}" Opacity="0.8" />
+	<!--  Text Accented Brushes -->
+	<SolidColorBrush x:Key="AccentTextDefaultBrush" Color="{StaticResource AccentFillTertiaryColor}" />
+	<SolidColorBrush x:Key="AccentTextHoveredBrush" Color="{StaticResource AccentFillTertiaryColor}" />
+	<SolidColorBrush x:Key="AccentTextPressedBrush" Color="{StaticResource AccentFillSecondaryColor}" />
+	<!-- Text Default Colors -->
+	<Color x:Key="TextFillPrimaryColor">#FFFFFFFF</Color>
+	<Color x:Key="TextFillSecondaryColor">#C5FFFFFF</Color>
+	<Color x:Key="TextFillTertiaryColor">#87FFFFFF</Color>
+	<Color x:Key="TextFillSelectedColor">#FFFFFFFF</Color>
+	<Color x:Key="TextFillDisabledColor">#5DFFFFFF</Color>
+	<!-- Text Alternate Colors (on accented background) -->
+	<Color x:Key="TextAltFillDefaultColor">#FF000000</Color>
+	<Color x:Key="TextAltFillPressedColor">#80000000</Color>
+	<Color x:Key="TextAltFillDisabledColor">#87FFFFFF</Color>
+	<!-- Text Default Brushes -->
+	<SolidColorBrush x:Key="TextDefaultForegroundBrush" Color="{StaticResource TextFillPrimaryColor}" />
+	<SolidColorBrush x:Key="TextSecondaryForegroundBrush" Color="{StaticResource TextFillSecondaryColor}" />
+	<SolidColorBrush x:Key="TextTertiaryForegroundBrush" Color="{StaticResource TextFillTertiaryColor}" />
+	<SolidColorBrush x:Key="TextSelectedForegroundBrush" Color="{StaticResource TextFillSelectedColor}" />
+	<SolidColorBrush x:Key="TextDisabledForegroundBrush" Color="{StaticResource TextFillDisabledColor}" />
 </ResourceDictionary>
