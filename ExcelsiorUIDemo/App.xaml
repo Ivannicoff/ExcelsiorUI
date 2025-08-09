@@ -1,0 +1,22 @@
+﻿<!--
+    Excelsior UI Framework
+    © 2025 Alexios Ivannicoff. All rights reserved.
+    Esse quam videri — To be rather than to seem.
+
+    This source code is distributed under the terms of the MIT License,
+    full text if not included: https://opensource.org/licenses/MIT
+-->
+<Application x:Class="ExcelsiorUIDemo.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ExcelsiorUIDemo"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Ivannicoff.Excelsior;component/Themes/ExcelsiorLight.xaml" />
+                <ResourceDictionary Source="/Ivannicoff.Excelsior;component/Themes/ExcelsiorUI.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

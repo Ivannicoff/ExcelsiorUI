@@ -1,0 +1,63 @@
+﻿<!--
+    Excelsior UI Framework
+    © 2025 Alexios Ivannicoff. All rights reserved.
+    Esse quam videri — To be rather than to seem.
+
+    This source code is distributed under the terms of the MIT License,
+    full text if not included: https://opensource.org/licenses/MIT
+-->
+<Window x:Class="ExcelsiorUIDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExcelsiorUIDemo"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="360" Width="640" WindowStartupLocation="CenterScreen">
+    <DockPanel>
+        <TextBlock DockPanel.Dock="Top" Text="Welcome to Excelsior UI Framework!" />
+        <TextBlock DockPanel.Dock="Top" Text="This is a demo application showcasing Excelsior UI components."/>
+        <Border DockPanel.Dock="Bottom" Padding="20">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Content="Default" IsDefault="True" />
+                <Button Grid.Column="1" Content="Normal"/>
+                <Button Grid.Column="2" Content="Disabled" IsEnabled="False" />
+                <Button Grid.Column="3" Content="Cancel" IsCancel="True" />
+            </Grid>
+        </Border>
+        <Border Padding="20">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Vertical" Grid.Column="0">
+                    <CheckBox Content="Normal" />
+                    <CheckBox Content="Checked" IsChecked="True"/>
+                    <CheckBox Content="Null Value" IsChecked="{x:Null}"/>
+                    <CheckBox Content="Disabled" IsEnabled="False"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Grid.Column="1">
+                    <RadioButton GroupName="Options" Content="Normal" />
+                    <RadioButton GroupName="Options" Content="Selected" IsChecked="True" />
+                    <RadioButton GroupName="Options" Content="Null Value" IsChecked="{x:Null}" />
+                    <RadioButton GroupName="Options" Content="Disabled" IsEnabled="False"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Grid.Column="2">
+                    <TextBox />
+                    <TextBox />
+                    <TextBox />
+                    <TextBox />
+                </StackPanel>
+            </Grid>
+        </Border>
+    </DockPanel>
+</Window>
